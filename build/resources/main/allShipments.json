@@ -1,0 +1,28 @@
+[{
+  "id": 1,
+  "shippingAddressId": 2,
+  "accountId": 1,
+  "shippedDate": "2023-08-30T15:55:37.338433300Z",
+  "deliveryDate": "2023-09-02T15:55:37.338433300Z",
+  "orderLineItems": [{
+    "id": 4,
+    "orderId": 1,
+    "productId": 3,
+    "shipmentId": null,
+    "quantity": 1,
+    "price": 13.99,
+    "totalPrice": null,
+    "createDateTime": null,
+    "updateDateTime": null
+  }, {
+    "id": 3,
+    "orderId": 1,
+    "productId": 1,
+    "shipmentId": null,
+    "quantity": 2,
+    "price": 10,
+    "totalPrice": null,
+    "createDateTime": null,
+    "updateDateTime": null
+  }]
+}]

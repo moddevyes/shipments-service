@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: shipments-service
+  datasource:
+    url: jdbc:mysql://${DATA_HOSTNAME:localhost}:3333/ecommerce_shipments_db?&useSSL=false&allowPublicKeyRetrieval=true
+    username: ${DATA_USERNAME:davidking}
+    password: ${DATA_PASSWORD:davidking!!}
+  jpa:
+    properties:
+      javax:
+        persistence:
+          schema-generation:
+            scripts:
+              action: create
+              create-target: schema.sql
+              create-source: metadata
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        hbm2ddl:
+          auto: create
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+server:
+  port: 8003
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    statusPageUrl: https://${eureka.hostname}/info
+    healthCheckUrl: https://${eureka.hostname}/health
+    homePageUrl: https://${eureka.hostname}/
