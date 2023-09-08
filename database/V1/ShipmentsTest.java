@@ -1,5 +1,7 @@
 package com.kinandcarta.ecommerce;
 
+import com.kinandcarta.ecommerce.entities.OrderLineItems;
+import com.kinandcarta.ecommerce.entities.Shipments;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
@@ -22,8 +24,8 @@ class ShipmentsTest {
     @Test
     void modelMethods() {
         model.setId(defaultID);
-        model.setAccountId(defaultID);
-        model.setShippingAddressId(defaultID);
+        model.setShipmentAccount(defaultID);
+        model.setShipmentAddress(defaultID);
         model.setDeliveryDate(defaultDateTime);
         model.setShippedDate(defaultDateTime);
         model.setOrderLineItems(defaultOrderLineItems);

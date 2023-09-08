@@ -1,0 +1,69 @@
+{
+  "id": 2,
+  "shipmentAddress": {
+    "id": 4,
+    "address1": "1001 Shipment Effencient Drive",
+    "address2": "Suite 1001",
+    "city": "Shipment Zone City",
+    "state": "FL",
+    "province": "Fast OnTime Province",
+    "postalCode": "33000",
+    "country": "US",
+    "createDateTime": "2023-09-07T21:08:40.518424Z",
+    "updateDateTime": "2023-09-07T21:08:40.518424Z"
+  },
+  "shipmentAccount": {
+    "id": 3,
+    "firstName": "Fissure",
+    "lastName": "ShipLastName",
+    "emailAddress": "fissure.last@arrivingfivedays.com",
+    "addresses": [
+      {
+        "id": 3,
+        "address1": "1001 Shipment Effencient Drive",
+        "address2": "Suite 1001",
+        "city": "Shipment Zone City",
+        "state": "FL",
+        "province": "Fast OnTime Province",
+        "postalCode": "33000",
+        "country": "US",
+        "createDateTime": "2023-09-07T21:08:40.517410Z",
+        "updateDateTime": "2023-09-07T21:08:40.517410Z"
+      }
+    ],
+    "createDateTime": "2023-09-07T21:08:40.514393Z",
+    "updateDateTime": "2023-09-07T21:08:40.514393Z"
+  },
+  "shippedDate": {
+    "valueForShippedDate": "2023-09-07T21:05:44.261273300Z"
+  },
+  "deliveryDate": {
+    "valueForDeliveryDate": "2023-09-07T21:05:44.261273300Z"
+  },
+  "orderLineItems": [
+    {
+      "id": 7,
+      "orderId": 1,
+      "productId": 1,
+      "shipmentId": null,
+      "quantity": 2,
+      "price": 10,
+      "totalPrice": null,
+      "createDateTime": "2023-09-07T21:08:40.520585Z",
+      "updateDateTime": "2023-09-07T21:08:40.520585Z"
+    },
+    {
+      "id": 8,
+      "orderId": 1,
+      "productId": 3,
+      "shipmentId": null,
+      "quantity": 1,
+      "price": 13.99,
+      "totalPrice": null,
+      "createDateTime": "2023-09-07T21:08:40.521582Z",
+      "updateDateTime": "2023-09-07T21:08:40.521582Z"
+    }
+  ],
+  "createDateTime": "2023-09-07T21:08:40.519466Z",
+  "updateDateTime": "2023-09-07T21:08:40.519466Z"
+}

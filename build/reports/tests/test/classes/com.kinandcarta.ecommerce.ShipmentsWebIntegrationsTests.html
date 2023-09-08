@@ -35,13 +35,13 @@
 </td>
 <td>
 <div class="infoBox" id="ignored">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>ignored</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.209s</div>
+<div class="counter">0.473s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,7 +50,7 @@
 </div>
 </td>
 <td>
-<div class="infoBox skipped" id="successRate">
+<div class="infoBox success" id="successRate">
 <div class="percent">100%</div>
 <p>successful</p>
 </div>
@@ -79,36 +79,36 @@
 </thead>
 <tr>
 <td class="success">shouldCreate_Shipment()</td>
-<td class="success">0.193s</td>
+<td class="success">0.413s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">shouldDelete_Shipment()</td>
-<td class="success">0.002s</td>
+<td class="success">0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">shouldFindAll_Shipment()</td>
-<td class="success">0.007s</td>
+<td class="success">0.017s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">shouldFindById_Shipment()</td>
-<td class="success">0.007s</td>
+<td class="success">0.016s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="skipped">shouldUpdate_Shipment()</td>
-<td class="skipped">-</td>
-<td class="skipped">ignored</td>
+<td class="success">shouldUpdate_Shipment()</td>
+<td class="success">0.023s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>14:04:16.424 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.kinandcarta.ecommerce.ShipmentsWebIntegrationsTests]: ShipmentsWebIntegrationsTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-14:04:16.587 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.kinandcarta.ecommerce.ShipmentsApplication for test class com.kinandcarta.ecommerce.ShipmentsWebIntegrationsTests
+<pre>11:57:33.862 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.kinandcarta.ecommerce.ShipmentsWebIntegrationsTests]: ShipmentsWebIntegrationsTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:57:34.092 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.kinandcarta.ecommerce.ShipmentsApplication for test class com.kinandcarta.ecommerce.ShipmentsWebIntegrationsTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -118,19 +118,19 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.3)
 
-2023-08-31T14:04:17.305-05:00  INFO 28056 --- [    Test worker] c.k.e.ShipmentsWebIntegrationsTests      : Starting ShipmentsWebIntegrationsTests using Java 17.0.8 with PID 28056 (started by DavidKing in C:\Users\DavidKing\Desktop\GitHub_Projects\shipments-service)
-2023-08-31T14:04:17.306-05:00  INFO 28056 --- [    Test worker] c.k.e.ShipmentsWebIntegrationsTests      : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2023-08-31T14:04:18.172-05:00  INFO 28056 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-08-31T14:04:18.172-05:00  INFO 28056 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-08-31T14:04:18.174-05:00  INFO 28056 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2023-08-31T14:04:18.203-05:00  INFO 28056 --- [    Test worker] c.k.e.ShipmentsWebIntegrationsTests      : Started ShipmentsWebIntegrationsTests in 1.412 seconds (process running for 4.058)
+2023-09-08T11:57:35.220-05:00  INFO 29744 --- [    Test worker] c.k.e.ShipmentsWebIntegrationsTests      : Starting ShipmentsWebIntegrationsTests using Java 17.0.8 with PID 29744 (started by DavidKing in C:\Users\DavidKing\Desktop\GitHub_Projects\shipments-service)
+2023-09-08T11:57:35.222-05:00  INFO 29744 --- [    Test worker] c.k.e.ShipmentsWebIntegrationsTests      : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2023-09-08T11:57:37.072-05:00  INFO 29744 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-09-08T11:57:37.072-05:00  INFO 29744 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-09-08T11:57:37.078-05:00  INFO 29744 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2023-09-08T11:57:37.139-05:00  INFO 29744 --- [    Test worker] c.k.e.ShipmentsWebIntegrationsTests      : Started ShipmentsWebIntegrationsTests in 2.693 seconds (process running for 8.599)
 
 MockHttpServletRequest:
       HTTP Method = POST
       Request URI = /shipments
        Parameters = {}
-          Headers = [Content-Type:&quot;application/json;charset=UTF-8&quot;, Accept:&quot;application/json&quot;, Content-Length:&quot;439&quot;]
-             Body = {&quot;id&quot;:1,&quot;shippingAddressId&quot;:2,&quot;accountId&quot;:1,&quot;shippedDate&quot;:&quot;2023-08-31T19:04:18.214890900Z&quot;,&quot;deliveryDate&quot;:&quot;2023-09-03T19:04:18.214890900Z&quot;,&quot;orderLineItems&quot;:[{&quot;id&quot;:4,&quot;orderId&quot;:1,&quot;productId&quot;:3,&quot;shipmentId&quot;:null,&quot;quantity&quot;:1,&quot;price&quot;:13.99,&quot;totalPrice&quot;:null,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null},{&quot;id&quot;:3,&quot;orderId&quot;:1,&quot;productId&quot;:1,&quot;shipmentId&quot;:null,&quot;quantity&quot;:2,&quot;price&quot;:10,&quot;totalPrice&quot;:null,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null}]}
+          Headers = [Content-Type:&quot;application/json;charset=UTF-8&quot;, Accept:&quot;application/json&quot;, Content-Length:&quot;1176&quot;]
+             Body = {&quot;id&quot;:1,&quot;shipmentAddress&quot;:{&quot;id&quot;:100,&quot;address1&quot;:&quot;1001 Shipment Effencient Drive&quot;,&quot;address2&quot;:&quot;Suite 1001&quot;,&quot;city&quot;:&quot;Shipment Zone City&quot;,&quot;state&quot;:&quot;FL&quot;,&quot;province&quot;:&quot;Fast OnTime Province&quot;,&quot;postalCode&quot;:&quot;33000&quot;,&quot;country&quot;:&quot;US&quot;,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null},&quot;shipmentAccount&quot;:{&quot;id&quot;:100,&quot;firstName&quot;:&quot;ShipFirstName&quot;,&quot;lastName&quot;:&quot;ShipLastName&quot;,&quot;emailAddress&quot;:&quot;shipfirst.last@arrivingfivedays.com&quot;,&quot;addresses&quot;:[{&quot;id&quot;:100,&quot;address1&quot;:&quot;1001 Shipment Effencient Drive&quot;,&quot;address2&quot;:&quot;Suite 1001&quot;,&quot;city&quot;:&quot;Shipment Zone City&quot;,&quot;state&quot;:&quot;FL&quot;,&quot;province&quot;:&quot;Fast OnTime Province&quot;,&quot;postalCode&quot;:&quot;33000&quot;,&quot;country&quot;:&quot;US&quot;,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null}],&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null},&quot;shippedDate&quot;:{&quot;valueForShippedDate&quot;:&quot;2023-09-08T16:57:37.163501400Z&quot;},&quot;deliveryDate&quot;:{&quot;valueForDeliveryDate&quot;:&quot;2023-09-08T16:57:37.163501400Z&quot;},&quot;orderLineItems&quot;:[{&quot;id&quot;:4,&quot;orderId&quot;:1,&quot;productId&quot;:3,&quot;shipmentId&quot;:null,&quot;quantity&quot;:1,&quot;price&quot;:13.99,&quot;totalPrice&quot;:null,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null},{&quot;id&quot;:3,&quot;orderId&quot;:1,&quot;productId&quot;:1,&quot;shipmentId&quot;:null,&quot;quantity&quot;:2,&quot;price&quot;:10,&quot;totalPrice&quot;:null,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null}],&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null}
     Session Attrs = {}
 
 Handler:
@@ -157,7 +157,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Content-Type:&quot;application/json&quot;]
      Content type = application/json
-             Body = {&quot;id&quot;:1,&quot;shippingAddressId&quot;:2,&quot;accountId&quot;:1,&quot;shippedDate&quot;:&quot;2023-08-31T19:04:18.265897500Z&quot;,&quot;deliveryDate&quot;:&quot;2023-09-03T19:04:18.265897500Z&quot;,&quot;orderLineItems&quot;:[{&quot;id&quot;:4,&quot;orderId&quot;:1,&quot;productId&quot;:3,&quot;shipmentId&quot;:null,&quot;quantity&quot;:1,&quot;price&quot;:13.99,&quot;totalPrice&quot;:null,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null},{&quot;id&quot;:3,&quot;orderId&quot;:1,&quot;productId&quot;:1,&quot;shipmentId&quot;:null,&quot;quantity&quot;:2,&quot;price&quot;:10,&quot;totalPrice&quot;:null,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null}]}
+             Body = {&quot;id&quot;:1,&quot;shipmentAddress&quot;:{&quot;id&quot;:100,&quot;address1&quot;:&quot;1001 Shipment Effencient Drive&quot;,&quot;address2&quot;:&quot;Suite 1001&quot;,&quot;city&quot;:&quot;Shipment Zone City&quot;,&quot;state&quot;:&quot;FL&quot;,&quot;province&quot;:&quot;Fast OnTime Province&quot;,&quot;postalCode&quot;:&quot;33000&quot;,&quot;country&quot;:&quot;US&quot;,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null},&quot;shipmentAccount&quot;:{&quot;id&quot;:100,&quot;firstName&quot;:&quot;ShipFirstName&quot;,&quot;lastName&quot;:&quot;ShipLastName&quot;,&quot;emailAddress&quot;:&quot;shipfirst.last@arrivingfivedays.com&quot;,&quot;addresses&quot;:[{&quot;id&quot;:100,&quot;address1&quot;:&quot;1001 Shipment Effencient Drive&quot;,&quot;address2&quot;:&quot;Suite 1001&quot;,&quot;city&quot;:&quot;Shipment Zone City&quot;,&quot;state&quot;:&quot;FL&quot;,&quot;province&quot;:&quot;Fast OnTime Province&quot;,&quot;postalCode&quot;:&quot;33000&quot;,&quot;country&quot;:&quot;US&quot;,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null}],&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null},&quot;shippedDate&quot;:{&quot;valueForShippedDate&quot;:&quot;2023-09-08T16:57:37.279732600Z&quot;},&quot;deliveryDate&quot;:{&quot;valueForDeliveryDate&quot;:&quot;2023-09-08T16:57:37.279732600Z&quot;},&quot;orderLineItems&quot;:[{&quot;id&quot;:4,&quot;orderId&quot;:1,&quot;productId&quot;:3,&quot;shipmentId&quot;:null,&quot;quantity&quot;:1,&quot;price&quot;:13.99,&quot;totalPrice&quot;:null,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null},{&quot;id&quot;:3,&quot;orderId&quot;:1,&quot;productId&quot;:1,&quot;shipmentId&quot;:null,&quot;quantity&quot;:2,&quot;price&quot;:10,&quot;totalPrice&quot;:null,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null}],&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
@@ -194,7 +194,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Content-Type:&quot;application/json&quot;]
      Content type = application/json
-             Body = [{&quot;id&quot;:1,&quot;shippingAddressId&quot;:2,&quot;accountId&quot;:1,&quot;shippedDate&quot;:&quot;2023-08-31T19:04:18.404491700Z&quot;,&quot;deliveryDate&quot;:&quot;2023-09-03T19:04:18.404491700Z&quot;,&quot;orderLineItems&quot;:[{&quot;id&quot;:4,&quot;orderId&quot;:1,&quot;productId&quot;:3,&quot;shipmentId&quot;:null,&quot;quantity&quot;:1,&quot;price&quot;:13.99,&quot;totalPrice&quot;:null,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null},{&quot;id&quot;:3,&quot;orderId&quot;:1,&quot;productId&quot;:1,&quot;shipmentId&quot;:null,&quot;quantity&quot;:2,&quot;price&quot;:10,&quot;totalPrice&quot;:null,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null}]}]
+             Body = [{&quot;id&quot;:1,&quot;shipmentAddress&quot;:{&quot;id&quot;:100,&quot;address1&quot;:&quot;1001 Shipment Effencient Drive&quot;,&quot;address2&quot;:&quot;Suite 1001&quot;,&quot;city&quot;:&quot;Shipment Zone City&quot;,&quot;state&quot;:&quot;FL&quot;,&quot;province&quot;:&quot;Fast OnTime Province&quot;,&quot;postalCode&quot;:&quot;33000&quot;,&quot;country&quot;:&quot;US&quot;,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null},&quot;shipmentAccount&quot;:{&quot;id&quot;:100,&quot;firstName&quot;:&quot;ShipFirstName&quot;,&quot;lastName&quot;:&quot;ShipLastName&quot;,&quot;emailAddress&quot;:&quot;shipfirst.last@arrivingfivedays.com&quot;,&quot;addresses&quot;:[{&quot;id&quot;:100,&quot;address1&quot;:&quot;1001 Shipment Effencient Drive&quot;,&quot;address2&quot;:&quot;Suite 1001&quot;,&quot;city&quot;:&quot;Shipment Zone City&quot;,&quot;state&quot;:&quot;FL&quot;,&quot;province&quot;:&quot;Fast OnTime Province&quot;,&quot;postalCode&quot;:&quot;33000&quot;,&quot;country&quot;:&quot;US&quot;,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null}],&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null},&quot;shippedDate&quot;:{&quot;valueForShippedDate&quot;:&quot;2023-09-08T16:57:37.569777100Z&quot;},&quot;deliveryDate&quot;:{&quot;valueForDeliveryDate&quot;:&quot;2023-09-08T16:57:37.569777100Z&quot;},&quot;orderLineItems&quot;:[{&quot;id&quot;:4,&quot;orderId&quot;:1,&quot;productId&quot;:3,&quot;shipmentId&quot;:null,&quot;quantity&quot;:1,&quot;price&quot;:13.99,&quot;totalPrice&quot;:null,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null},{&quot;id&quot;:3,&quot;orderId&quot;:1,&quot;productId&quot;:1,&quot;shipmentId&quot;:null,&quot;quantity&quot;:2,&quot;price&quot;:10,&quot;totalPrice&quot;:null,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null}],&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null}]
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
@@ -231,7 +231,44 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Content-Type:&quot;application/json&quot;]
      Content type = application/json
-             Body = {&quot;id&quot;:1,&quot;shippingAddressId&quot;:2,&quot;accountId&quot;:1,&quot;shippedDate&quot;:&quot;2023-08-31T19:04:18.413490Z&quot;,&quot;deliveryDate&quot;:&quot;2023-09-03T19:04:18.413490Z&quot;,&quot;orderLineItems&quot;:[{&quot;id&quot;:4,&quot;orderId&quot;:1,&quot;productId&quot;:3,&quot;shipmentId&quot;:null,&quot;quantity&quot;:1,&quot;price&quot;:13.99,&quot;totalPrice&quot;:null,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null},{&quot;id&quot;:3,&quot;orderId&quot;:1,&quot;productId&quot;:1,&quot;shipmentId&quot;:null,&quot;quantity&quot;:2,&quot;price&quot;:10,&quot;totalPrice&quot;:null,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null}]}
+             Body = {&quot;id&quot;:1,&quot;shipmentAddress&quot;:{&quot;id&quot;:100,&quot;address1&quot;:&quot;1001 Shipment Effencient Drive&quot;,&quot;address2&quot;:&quot;Suite 1001&quot;,&quot;city&quot;:&quot;Shipment Zone City&quot;,&quot;state&quot;:&quot;FL&quot;,&quot;province&quot;:&quot;Fast OnTime Province&quot;,&quot;postalCode&quot;:&quot;33000&quot;,&quot;country&quot;:&quot;US&quot;,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null},&quot;shipmentAccount&quot;:{&quot;id&quot;:100,&quot;firstName&quot;:&quot;ShipFirstName&quot;,&quot;lastName&quot;:&quot;ShipLastName&quot;,&quot;emailAddress&quot;:&quot;shipfirst.last@arrivingfivedays.com&quot;,&quot;addresses&quot;:[{&quot;id&quot;:100,&quot;address1&quot;:&quot;1001 Shipment Effencient Drive&quot;,&quot;address2&quot;:&quot;Suite 1001&quot;,&quot;city&quot;:&quot;Shipment Zone City&quot;,&quot;state&quot;:&quot;FL&quot;,&quot;province&quot;:&quot;Fast OnTime Province&quot;,&quot;postalCode&quot;:&quot;33000&quot;,&quot;country&quot;:&quot;US&quot;,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null}],&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null},&quot;shippedDate&quot;:{&quot;valueForShippedDate&quot;:&quot;2023-09-08T16:57:37.587861300Z&quot;},&quot;deliveryDate&quot;:{&quot;valueForDeliveryDate&quot;:&quot;2023-09-08T16:57:37.587861300Z&quot;},&quot;orderLineItems&quot;:[{&quot;id&quot;:4,&quot;orderId&quot;:1,&quot;productId&quot;:3,&quot;shipmentId&quot;:null,&quot;quantity&quot;:1,&quot;price&quot;:13.99,&quot;totalPrice&quot;:null,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null},{&quot;id&quot;:3,&quot;orderId&quot;:1,&quot;productId&quot;:1,&quot;shipmentId&quot;:null,&quot;quantity&quot;:2,&quot;price&quot;:10,&quot;totalPrice&quot;:null,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null}],&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /shipments/1
+       Parameters = {}
+          Headers = [Content-Type:&quot;application/json;charset=UTF-8&quot;, Accept:&quot;application/json&quot;, Content-Length:&quot;1176&quot;]
+             Body = {&quot;id&quot;:1,&quot;shipmentAddress&quot;:{&quot;id&quot;:100,&quot;address1&quot;:&quot;1001 Shipment Effencient Drive&quot;,&quot;address2&quot;:&quot;Suite 1001&quot;,&quot;city&quot;:&quot;Shipment Zone City&quot;,&quot;state&quot;:&quot;FL&quot;,&quot;province&quot;:&quot;Fast OnTime Province&quot;,&quot;postalCode&quot;:&quot;33000&quot;,&quot;country&quot;:&quot;US&quot;,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null},&quot;shipmentAccount&quot;:{&quot;id&quot;:100,&quot;firstName&quot;:&quot;ShipFirstName&quot;,&quot;lastName&quot;:&quot;ShipLastName&quot;,&quot;emailAddress&quot;:&quot;shipfirst.last@arrivingfivedays.com&quot;,&quot;addresses&quot;:[{&quot;id&quot;:100,&quot;address1&quot;:&quot;1001 Shipment Effencient Drive&quot;,&quot;address2&quot;:&quot;Suite 1001&quot;,&quot;city&quot;:&quot;Shipment Zone City&quot;,&quot;state&quot;:&quot;FL&quot;,&quot;province&quot;:&quot;Fast OnTime Province&quot;,&quot;postalCode&quot;:&quot;33000&quot;,&quot;country&quot;:&quot;US&quot;,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null}],&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null},&quot;shippedDate&quot;:{&quot;valueForShippedDate&quot;:&quot;2023-09-08T16:57:37.613899500Z&quot;},&quot;deliveryDate&quot;:{&quot;valueForDeliveryDate&quot;:&quot;2023-09-08T16:57:37.613899500Z&quot;},&quot;orderLineItems&quot;:[{&quot;id&quot;:4,&quot;orderId&quot;:1,&quot;productId&quot;:3,&quot;shipmentId&quot;:null,&quot;quantity&quot;:1,&quot;price&quot;:13.99,&quot;totalPrice&quot;:null,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null},{&quot;id&quot;:3,&quot;orderId&quot;:1,&quot;productId&quot;:1,&quot;shipmentId&quot;:null,&quot;quantity&quot;:2,&quot;price&quot;:10,&quot;totalPrice&quot;:null,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null}],&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null}
+    Session Attrs = {}
+
+Handler:
+             Type = com.kinandcarta.ecommerce.ShipmentsController
+           Method = com.kinandcarta.ecommerce.ShipmentsController#update(Long, Shipments)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:&quot;application/json&quot;]
+     Content type = application/json
+             Body = {&quot;id&quot;:1,&quot;shipmentAddress&quot;:{&quot;id&quot;:100,&quot;address1&quot;:&quot;1001 Shipment Effencient Drive&quot;,&quot;address2&quot;:&quot;Suite 1001&quot;,&quot;city&quot;:&quot;Shipment Zone City&quot;,&quot;state&quot;:&quot;FL&quot;,&quot;province&quot;:&quot;Fast OnTime Province&quot;,&quot;postalCode&quot;:&quot;33000&quot;,&quot;country&quot;:&quot;US&quot;,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null},&quot;shipmentAccount&quot;:{&quot;id&quot;:100,&quot;firstName&quot;:&quot;ShipFirstName&quot;,&quot;lastName&quot;:&quot;ShipLastName&quot;,&quot;emailAddress&quot;:&quot;shipfirst.last@arrivingfivedays.com&quot;,&quot;addresses&quot;:[{&quot;id&quot;:100,&quot;address1&quot;:&quot;1001 Shipment Effencient Drive&quot;,&quot;address2&quot;:&quot;Suite 1001&quot;,&quot;city&quot;:&quot;Shipment Zone City&quot;,&quot;state&quot;:&quot;FL&quot;,&quot;province&quot;:&quot;Fast OnTime Province&quot;,&quot;postalCode&quot;:&quot;33000&quot;,&quot;country&quot;:&quot;US&quot;,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null}],&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null},&quot;shippedDate&quot;:{&quot;valueForShippedDate&quot;:&quot;2023-09-08T16:57:37.613899500Z&quot;},&quot;deliveryDate&quot;:{&quot;valueForDeliveryDate&quot;:&quot;2023-09-08T16:57:37.613899500Z&quot;},&quot;orderLineItems&quot;:[{&quot;id&quot;:4,&quot;orderId&quot;:1,&quot;productId&quot;:3,&quot;shipmentId&quot;:null,&quot;quantity&quot;:1,&quot;price&quot;:13.99,&quot;totalPrice&quot;:null,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null},{&quot;id&quot;:3,&quot;orderId&quot;:1,&quot;productId&quot;:1,&quot;shipmentId&quot;:null,&quot;quantity&quot;:2,&quot;price&quot;:10,&quot;totalPrice&quot;:null,&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null}],&quot;createDateTime&quot;:null,&quot;updateDateTime&quot;:null}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
@@ -246,7 +283,7 @@ MockHttpServletResponse:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.3</a> at Aug 31, 2023, 2:04:18 PM</p>
+<a href="http://www.gradle.org">Gradle 8.3</a> at Sep 8, 2023, 11:57:37 AM</p>
 </div>
 </div>
 </body>

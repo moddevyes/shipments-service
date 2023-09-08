@@ -1,5 +1,6 @@
 package com.kinandcarta.ecommerce;
 
+import com.kinandcarta.ecommerce.entities.Products;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;

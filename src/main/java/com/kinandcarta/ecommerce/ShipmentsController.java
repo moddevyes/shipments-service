@@ -1,7 +1,12 @@
 package com.kinandcarta.ecommerce;
 
+import com.kinandcarta.ecommerce.contracts.CrudUseCase;
+import com.kinandcarta.ecommerce.entities.Shipments;
+import com.kinandcarta.ecommerce.exceptions.MinimumShipmentFieldsNotProvidedException;
+import com.kinandcarta.ecommerce.exceptions.ShipmentDoesNotExistException;
 import jakarta.validation.constraints.NotNull;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -25,7 +30,12 @@ public class ShipmentsController implements CrudUseCase<Shipments> {
         try {
             return new ResponseEntity<>(shipmentsHandler.create(model), HttpStatus.OK);
         } catch (final Exception e) {
-            log.error("::METHOD, create, exception occured.", e);
+            if (e instanceof MinimumShipmentFieldsNotProvidedException ||
+                e instanceof DuplicateKeyException) {
+                log.error("Failed to create new Shipment {}", e.getMessage());
+                return ResponseEntity.badRequest().build();
+            }
+            log.error("::METHOD, create, exception occurred.", e);
             return ResponseEntity.notFound().build();
         }
     }
@@ -34,9 +44,13 @@ public class ShipmentsController implements CrudUseCase<Shipments> {
     @PutMapping(value = "/shipments/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Shipments> update(@PathVariable("id") @NotNull final Long id, @RequestBody Shipments model) {
         try {
-            return ResponseEntity.notFound().build();
+            return new ResponseEntity<>(shipmentsHandler.update(id, model), HttpStatus.OK);
         } catch (final Exception e) {
-            log.error("::METHOD, update, exception occured.", e);
+            if (e instanceof ShipmentDoesNotExistException) {
+                log.error("Shipment does not exists Exception, will not update.");
+                return ResponseEntity.badRequest().build();
+            }
+            log.error("::METHOD, update, exception occurred.", e);
             return ResponseEntity.notFound().build();
         }
     }
@@ -48,7 +62,10 @@ public class ShipmentsController implements CrudUseCase<Shipments> {
         try {
             shipmentsHandler.delete(id);
         } catch (final Exception e) {
-            log.error("::METHOD, create, exception occured.", e);
+            if (e instanceof ShipmentDoesNotExistException) {
+                log.error("Delete failure, shipment does not exist for id - "+id);
+            }
+            log.error("::METHOD, delete, exception occurred.", e);
         }
     }
 
@@ -58,7 +75,7 @@ public class ShipmentsController implements CrudUseCase<Shipments> {
         try {
             return new ResponseEntity<>(shipmentsHandler.findById(id), HttpStatus.OK);
         } catch (final Exception e) {
-            log.error("::METHOD, findById, exception occured.", e);
+            log.error("::METHOD, findById, exception occurred.", e);
             return ResponseEntity.notFound().build();
         }
     }
@@ -69,7 +86,7 @@ public class ShipmentsController implements CrudUseCase<Shipments> {
         try {
             return new ResponseEntity<>(shipmentsHandler.findAll(), HttpStatus.OK);
         } catch (final Exception e) {
-            log.error("::METHOD, findAll, exception occured.", e);
+            log.error("::METHOD, findAll, exception occurred.", e);
             return ResponseEntity.notFound().build();
         }
     }

@@ -1,4 +1,6 @@
-package com.kinandcarta.ecommerce;
+package com.kinandcarta.ecommerce.contracts;
+
+import com.kinandcarta.ecommerce.entities.Shipments;
 
 import java.util.Set;
 

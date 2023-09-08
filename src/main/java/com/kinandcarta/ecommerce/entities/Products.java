@@ -1,4 +1,4 @@
-package com.kinandcarta.ecommerce;
+package com.kinandcarta.ecommerce.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.Column;
@@ -6,6 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 import lombok.*;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.annotations.CreationTimestamp;
@@ -28,7 +29,7 @@ public class Products {
     private Long id;
 
     @NotNull
-    @Column(columnDefinition = "varchar(200) not null ''", nullable = false, unique = true)
+    @Column(columnDefinition = "varchar(200) not null", nullable = false, unique = true)
     private String name;
 
     @Column(columnDefinition = "varchar(255) null default ''", unique = true)
@@ -38,7 +39,8 @@ public class Products {
     private String image;
 
     @NotNull
-    @Column(columnDefinition = "decimal(38, 2) not null default 0")
+    @Column(columnDefinition = "decimal(38, 2) not null")
+    @Positive(message = "Products unit price must be a positive number")
     private BigDecimal unitPrice;
 
     @CreationTimestamp
