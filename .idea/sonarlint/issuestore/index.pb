@@ -61,3 +61,15 @@ Esrc/test/java/com/kinandcarta/ecommerce/ShipmentsControllerTests.java,9\8\983c
 :
 
 Dockerfile,6\6\6651ddff6eb82c840ced7c1dddee15c6e1913dd4
+X
+(.idea/modules/shipments-service.main.iml,e\7\e778255e7fbd3f82d1e998a5d0f324fad212d99a
+X
+(.idea/modules/shipments-service.test.iml,4\b\4bda1883b53800932b1463454074b7668dfa2ecf
+]
+-.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+M
+database/V1/ProductsTest.java,d\d\ddae87417196f3e0abcfe5e76f56ce31e7b65f80
+u
+Esrc/main/java/com/kinandcarta/ecommerce/contracts/ServiceHandler.java,c\9\c9cbf2e8b9b61aba3d6dca9a1f338b6421f0387a
