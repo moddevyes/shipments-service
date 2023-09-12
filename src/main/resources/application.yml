@@ -10,6 +10,8 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
     database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: none
 
 server:
   port: 8003
@@ -22,3 +24,11 @@ eureka:
     statusPageUrl: https://${eureka.hostname}/info
     healthCheckUrl: https://${eureka.hostname}/health
     homePageUrl: https://${eureka.hostname}/
+
+shipment:
+  address:
+    wasNull: Shipment Address was null or missing, required to create Shipment
+  account:
+    wasNull: Shipment Account was null or missing, required to create Shipment
+  required:
+    fieldSuffix: ",required."

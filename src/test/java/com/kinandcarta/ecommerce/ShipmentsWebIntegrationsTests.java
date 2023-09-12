@@ -3,8 +3,9 @@ package com.kinandcarta.ecommerce;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import com.kinandcarta.ecommerce.entities.*;
+import com.kinandcarta.ecommerce.infrastructure.ShipmentsRepository;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,6 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import java.math.BigDecimal;
 import java.time.Instant;
-import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.Set;
 
@@ -34,7 +34,8 @@ class ShipmentsWebIntegrationsTests {
     @Autowired
     MockMvc mockMvc;
 
-    @MockBean ShipmentsRepository shipmentsRepository;
+    @MockBean
+    ShipmentsRepository shipmentsRepository;
 
     ObjectMapper mapper = new ObjectMapper();
 
@@ -53,6 +54,22 @@ class ShipmentsWebIntegrationsTests {
             .productId(3L)
             .build();
 
+    ShipmentAddress shipmentAddress = ShipmentAddress.builder().id(100L)
+            .address1("1001 Shipment Effencient Drive")
+            .address2("Suite 1001")
+            .city("Shipment Zone City")
+            .state("FL")
+            .province("Fast OnTime Province")
+            .postalCode("33000")
+            .country("US").build();
+    ShipmentAccount shipmentAccount = ShipmentAccount.builder()
+            .id(100L)
+            .firstName("ShipFirstName")
+            .lastName("ShipLastName")
+            .emailAddress("shipfirst.last@arrivingfivedays.com")
+            .addresses(
+                    Set.of(shipmentAddress)).build();
+
     @BeforeEach void setUp() {
         mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
         mapper.registerModule(new JavaTimeModule());
@@ -69,7 +86,8 @@ class ShipmentsWebIntegrationsTests {
                 .andDo(print())
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.id").exists())
-                .andExpect(MockMvcResultMatchers.jsonPath("$.accountId").exists())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.shipmentAccount").exists())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.shipmentAddress").exists())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.shippedDate").exists())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.deliveryDate").exists())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.orderLineItems").exists())
@@ -79,7 +97,7 @@ class ShipmentsWebIntegrationsTests {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.orderLineItems[0].quantity").exists())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.orderLineItems[0].price").exists());
     }
-    @Test @Disabled
+    @Test
     void shouldUpdate_Shipment() throws Exception {
         final String json = toJSON(shipmentNew());
         whenConditionsFor_FindShipmentsById(shipmentNew());
@@ -105,7 +123,7 @@ class ShipmentsWebIntegrationsTests {
                 .andDo(print())
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.id").exists())
-                .andExpect(MockMvcResultMatchers.jsonPath("$.accountId").exists())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.shipmentAccount").exists())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.shippedDate").exists())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.deliveryDate").exists())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.orderLineItems").exists())
@@ -124,7 +142,7 @@ class ShipmentsWebIntegrationsTests {
                 .andDo(print())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.[*].id").exists())
-                .andExpect(MockMvcResultMatchers.jsonPath("$.[*].accountId").exists())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.[*].shipmentAccount").exists())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.[*].shippedDate").exists())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.[*].deliveryDate").exists())
                 .andExpect(MockMvcResultMatchers.status().isOk());
@@ -137,10 +155,10 @@ class ShipmentsWebIntegrationsTests {
     private Shipments shipmentNew() {
         return  Shipments.builder()
                 .id(1L)
-                .accountId(1L)
-                .shippingAddressId(2L)
-                .shippedDate(Instant.now())
-                .deliveryDate(Instant.now().plus(3, ChronoUnit.DAYS))
+                .shipmentAccount(shipmentAccount)
+                .shipmentAddress(shipmentAddress)
+                .shippedDate(ShippedDate.builder().valueForShippedDate(Instant.now()).build())
+                .deliveryDate(DeliveryDate.builder().valueForDeliveryDate(Instant.now()).build())
                 .orderLineItems(Set.of(firstProduct, secondProduct))
                 .build();
     }

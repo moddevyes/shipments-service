@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kinandcarta.ecommerce.ShipmentsWebIntegrationsTests" tests="5" skipped="1" failures="0" errors="0" timestamp="2023-08-31T19:04:18" hostname="2NF0VT3" time="0.214">
+<testsuite name="com.kinandcarta.ecommerce.ShipmentsWebIntegrationsTests" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-09-08T16:57:37" hostname="2NF0VT3" time="0.482">
   <properties/>
-  <testcase name="shouldCreate_Shipment()" classname="com.kinandcarta.ecommerce.ShipmentsWebIntegrationsTests" time="0.193"/>
-  <testcase name="shouldFindAll_Shipment()" classname="com.kinandcarta.ecommerce.ShipmentsWebIntegrationsTests" time="0.007"/>
-  <testcase name="shouldFindById_Shipment()" classname="com.kinandcarta.ecommerce.ShipmentsWebIntegrationsTests" time="0.007"/>
-  <testcase name="shouldDelete_Shipment()" classname="com.kinandcarta.ecommerce.ShipmentsWebIntegrationsTests" time="0.002"/>
-  <testcase name="shouldUpdate_Shipment()" classname="com.kinandcarta.ecommerce.ShipmentsWebIntegrationsTests" time="0.0">
-    <skipped/>
-  </testcase>
-  <system-out><![CDATA[14:04:16.424 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.kinandcarta.ecommerce.ShipmentsWebIntegrationsTests]: ShipmentsWebIntegrationsTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-14:04:16.587 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.kinandcarta.ecommerce.ShipmentsApplication for test class com.kinandcarta.ecommerce.ShipmentsWebIntegrationsTests
+  <testcase name="shouldCreate_Shipment()" classname="com.kinandcarta.ecommerce.ShipmentsWebIntegrationsTests" time="0.413"/>
+  <testcase name="shouldFindAll_Shipment()" classname="com.kinandcarta.ecommerce.ShipmentsWebIntegrationsTests" time="0.017"/>
+  <testcase name="shouldFindById_Shipment()" classname="com.kinandcarta.ecommerce.ShipmentsWebIntegrationsTests" time="0.016"/>
+  <testcase name="shouldDelete_Shipment()" classname="com.kinandcarta.ecommerce.ShipmentsWebIntegrationsTests" time="0.004"/>
+  <testcase name="shouldUpdate_Shipment()" classname="com.kinandcarta.ecommerce.ShipmentsWebIntegrationsTests" time="0.023"/>
+  <system-out><![CDATA[11:57:33.862 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.kinandcarta.ecommerce.ShipmentsWebIntegrationsTests]: ShipmentsWebIntegrationsTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:57:34.092 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.kinandcarta.ecommerce.ShipmentsApplication for test class com.kinandcarta.ecommerce.ShipmentsWebIntegrationsTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -19,19 +17,19 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.3)
 
-2023-08-31T14:04:17.305-05:00  INFO 28056 --- [    Test worker] c.k.e.ShipmentsWebIntegrationsTests      : Starting ShipmentsWebIntegrationsTests using Java 17.0.8 with PID 28056 (started by DavidKing in C:\Users\DavidKing\Desktop\GitHub_Projects\shipments-service)
-2023-08-31T14:04:17.306-05:00  INFO 28056 --- [    Test worker] c.k.e.ShipmentsWebIntegrationsTests      : No active profile set, falling back to 1 default profile: "default"
-2023-08-31T14:04:18.172-05:00  INFO 28056 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-08-31T14:04:18.172-05:00  INFO 28056 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-08-31T14:04:18.174-05:00  INFO 28056 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2023-08-31T14:04:18.203-05:00  INFO 28056 --- [    Test worker] c.k.e.ShipmentsWebIntegrationsTests      : Started ShipmentsWebIntegrationsTests in 1.412 seconds (process running for 4.058)
+2023-09-08T11:57:35.220-05:00  INFO 29744 --- [    Test worker] c.k.e.ShipmentsWebIntegrationsTests      : Starting ShipmentsWebIntegrationsTests using Java 17.0.8 with PID 29744 (started by DavidKing in C:\Users\DavidKing\Desktop\GitHub_Projects\shipments-service)
+2023-09-08T11:57:35.222-05:00  INFO 29744 --- [    Test worker] c.k.e.ShipmentsWebIntegrationsTests      : No active profile set, falling back to 1 default profile: "default"
+2023-09-08T11:57:37.072-05:00  INFO 29744 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-09-08T11:57:37.072-05:00  INFO 29744 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-09-08T11:57:37.078-05:00  INFO 29744 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2023-09-08T11:57:37.139-05:00  INFO 29744 --- [    Test worker] c.k.e.ShipmentsWebIntegrationsTests      : Started ShipmentsWebIntegrationsTests in 2.693 seconds (process running for 8.599)
 
 MockHttpServletRequest:
       HTTP Method = POST
       Request URI = /shipments
        Parameters = {}
-          Headers = [Content-Type:"application/json;charset=UTF-8", Accept:"application/json", Content-Length:"439"]
-             Body = {"id":1,"shippingAddressId":2,"accountId":1,"shippedDate":"2023-08-31T19:04:18.214890900Z","deliveryDate":"2023-09-03T19:04:18.214890900Z","orderLineItems":[{"id":4,"orderId":1,"productId":3,"shipmentId":null,"quantity":1,"price":13.99,"totalPrice":null,"createDateTime":null,"updateDateTime":null},{"id":3,"orderId":1,"productId":1,"shipmentId":null,"quantity":2,"price":10,"totalPrice":null,"createDateTime":null,"updateDateTime":null}]}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Accept:"application/json", Content-Length:"1176"]
+             Body = {"id":1,"shipmentAddress":{"id":100,"address1":"1001 Shipment Effencient Drive","address2":"Suite 1001","city":"Shipment Zone City","state":"FL","province":"Fast OnTime Province","postalCode":"33000","country":"US","createDateTime":null,"updateDateTime":null},"shipmentAccount":{"id":100,"firstName":"ShipFirstName","lastName":"ShipLastName","emailAddress":"shipfirst.last@arrivingfivedays.com","addresses":[{"id":100,"address1":"1001 Shipment Effencient Drive","address2":"Suite 1001","city":"Shipment Zone City","state":"FL","province":"Fast OnTime Province","postalCode":"33000","country":"US","createDateTime":null,"updateDateTime":null}],"createDateTime":null,"updateDateTime":null},"shippedDate":{"valueForShippedDate":"2023-09-08T16:57:37.163501400Z"},"deliveryDate":{"valueForDeliveryDate":"2023-09-08T16:57:37.163501400Z"},"orderLineItems":[{"id":4,"orderId":1,"productId":3,"shipmentId":null,"quantity":1,"price":13.99,"totalPrice":null,"createDateTime":null,"updateDateTime":null},{"id":3,"orderId":1,"productId":1,"shipmentId":null,"quantity":2,"price":10,"totalPrice":null,"createDateTime":null,"updateDateTime":null}],"createDateTime":null,"updateDateTime":null}
     Session Attrs = {}
 
 Handler:
@@ -58,7 +56,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Content-Type:"application/json"]
      Content type = application/json
-             Body = {"id":1,"shippingAddressId":2,"accountId":1,"shippedDate":"2023-08-31T19:04:18.265897500Z","deliveryDate":"2023-09-03T19:04:18.265897500Z","orderLineItems":[{"id":4,"orderId":1,"productId":3,"shipmentId":null,"quantity":1,"price":13.99,"totalPrice":null,"createDateTime":null,"updateDateTime":null},{"id":3,"orderId":1,"productId":1,"shipmentId":null,"quantity":2,"price":10,"totalPrice":null,"createDateTime":null,"updateDateTime":null}]}
+             Body = {"id":1,"shipmentAddress":{"id":100,"address1":"1001 Shipment Effencient Drive","address2":"Suite 1001","city":"Shipment Zone City","state":"FL","province":"Fast OnTime Province","postalCode":"33000","country":"US","createDateTime":null,"updateDateTime":null},"shipmentAccount":{"id":100,"firstName":"ShipFirstName","lastName":"ShipLastName","emailAddress":"shipfirst.last@arrivingfivedays.com","addresses":[{"id":100,"address1":"1001 Shipment Effencient Drive","address2":"Suite 1001","city":"Shipment Zone City","state":"FL","province":"Fast OnTime Province","postalCode":"33000","country":"US","createDateTime":null,"updateDateTime":null}],"createDateTime":null,"updateDateTime":null},"shippedDate":{"valueForShippedDate":"2023-09-08T16:57:37.279732600Z"},"deliveryDate":{"valueForDeliveryDate":"2023-09-08T16:57:37.279732600Z"},"orderLineItems":[{"id":4,"orderId":1,"productId":3,"shipmentId":null,"quantity":1,"price":13.99,"totalPrice":null,"createDateTime":null,"updateDateTime":null},{"id":3,"orderId":1,"productId":1,"shipmentId":null,"quantity":2,"price":10,"totalPrice":null,"createDateTime":null,"updateDateTime":null}],"createDateTime":null,"updateDateTime":null}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
@@ -95,7 +93,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Content-Type:"application/json"]
      Content type = application/json
-             Body = [{"id":1,"shippingAddressId":2,"accountId":1,"shippedDate":"2023-08-31T19:04:18.404491700Z","deliveryDate":"2023-09-03T19:04:18.404491700Z","orderLineItems":[{"id":4,"orderId":1,"productId":3,"shipmentId":null,"quantity":1,"price":13.99,"totalPrice":null,"createDateTime":null,"updateDateTime":null},{"id":3,"orderId":1,"productId":1,"shipmentId":null,"quantity":2,"price":10,"totalPrice":null,"createDateTime":null,"updateDateTime":null}]}]
+             Body = [{"id":1,"shipmentAddress":{"id":100,"address1":"1001 Shipment Effencient Drive","address2":"Suite 1001","city":"Shipment Zone City","state":"FL","province":"Fast OnTime Province","postalCode":"33000","country":"US","createDateTime":null,"updateDateTime":null},"shipmentAccount":{"id":100,"firstName":"ShipFirstName","lastName":"ShipLastName","emailAddress":"shipfirst.last@arrivingfivedays.com","addresses":[{"id":100,"address1":"1001 Shipment Effencient Drive","address2":"Suite 1001","city":"Shipment Zone City","state":"FL","province":"Fast OnTime Province","postalCode":"33000","country":"US","createDateTime":null,"updateDateTime":null}],"createDateTime":null,"updateDateTime":null},"shippedDate":{"valueForShippedDate":"2023-09-08T16:57:37.569777100Z"},"deliveryDate":{"valueForDeliveryDate":"2023-09-08T16:57:37.569777100Z"},"orderLineItems":[{"id":4,"orderId":1,"productId":3,"shipmentId":null,"quantity":1,"price":13.99,"totalPrice":null,"createDateTime":null,"updateDateTime":null},{"id":3,"orderId":1,"productId":1,"shipmentId":null,"quantity":2,"price":10,"totalPrice":null,"createDateTime":null,"updateDateTime":null}],"createDateTime":null,"updateDateTime":null}]
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
@@ -132,7 +130,44 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Content-Type:"application/json"]
      Content type = application/json
-             Body = {"id":1,"shippingAddressId":2,"accountId":1,"shippedDate":"2023-08-31T19:04:18.413490Z","deliveryDate":"2023-09-03T19:04:18.413490Z","orderLineItems":[{"id":4,"orderId":1,"productId":3,"shipmentId":null,"quantity":1,"price":13.99,"totalPrice":null,"createDateTime":null,"updateDateTime":null},{"id":3,"orderId":1,"productId":1,"shipmentId":null,"quantity":2,"price":10,"totalPrice":null,"createDateTime":null,"updateDateTime":null}]}
+             Body = {"id":1,"shipmentAddress":{"id":100,"address1":"1001 Shipment Effencient Drive","address2":"Suite 1001","city":"Shipment Zone City","state":"FL","province":"Fast OnTime Province","postalCode":"33000","country":"US","createDateTime":null,"updateDateTime":null},"shipmentAccount":{"id":100,"firstName":"ShipFirstName","lastName":"ShipLastName","emailAddress":"shipfirst.last@arrivingfivedays.com","addresses":[{"id":100,"address1":"1001 Shipment Effencient Drive","address2":"Suite 1001","city":"Shipment Zone City","state":"FL","province":"Fast OnTime Province","postalCode":"33000","country":"US","createDateTime":null,"updateDateTime":null}],"createDateTime":null,"updateDateTime":null},"shippedDate":{"valueForShippedDate":"2023-09-08T16:57:37.587861300Z"},"deliveryDate":{"valueForDeliveryDate":"2023-09-08T16:57:37.587861300Z"},"orderLineItems":[{"id":4,"orderId":1,"productId":3,"shipmentId":null,"quantity":1,"price":13.99,"totalPrice":null,"createDateTime":null,"updateDateTime":null},{"id":3,"orderId":1,"productId":1,"shipmentId":null,"quantity":2,"price":10,"totalPrice":null,"createDateTime":null,"updateDateTime":null}],"createDateTime":null,"updateDateTime":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /shipments/1
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Accept:"application/json", Content-Length:"1176"]
+             Body = {"id":1,"shipmentAddress":{"id":100,"address1":"1001 Shipment Effencient Drive","address2":"Suite 1001","city":"Shipment Zone City","state":"FL","province":"Fast OnTime Province","postalCode":"33000","country":"US","createDateTime":null,"updateDateTime":null},"shipmentAccount":{"id":100,"firstName":"ShipFirstName","lastName":"ShipLastName","emailAddress":"shipfirst.last@arrivingfivedays.com","addresses":[{"id":100,"address1":"1001 Shipment Effencient Drive","address2":"Suite 1001","city":"Shipment Zone City","state":"FL","province":"Fast OnTime Province","postalCode":"33000","country":"US","createDateTime":null,"updateDateTime":null}],"createDateTime":null,"updateDateTime":null},"shippedDate":{"valueForShippedDate":"2023-09-08T16:57:37.613899500Z"},"deliveryDate":{"valueForDeliveryDate":"2023-09-08T16:57:37.613899500Z"},"orderLineItems":[{"id":4,"orderId":1,"productId":3,"shipmentId":null,"quantity":1,"price":13.99,"totalPrice":null,"createDateTime":null,"updateDateTime":null},{"id":3,"orderId":1,"productId":1,"shipmentId":null,"quantity":2,"price":10,"totalPrice":null,"createDateTime":null,"updateDateTime":null}],"createDateTime":null,"updateDateTime":null}
+    Session Attrs = {}
+
+Handler:
+             Type = com.kinandcarta.ecommerce.ShipmentsController
+           Method = com.kinandcarta.ecommerce.ShipmentsController#update(Long, Shipments)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"id":1,"shipmentAddress":{"id":100,"address1":"1001 Shipment Effencient Drive","address2":"Suite 1001","city":"Shipment Zone City","state":"FL","province":"Fast OnTime Province","postalCode":"33000","country":"US","createDateTime":null,"updateDateTime":null},"shipmentAccount":{"id":100,"firstName":"ShipFirstName","lastName":"ShipLastName","emailAddress":"shipfirst.last@arrivingfivedays.com","addresses":[{"id":100,"address1":"1001 Shipment Effencient Drive","address2":"Suite 1001","city":"Shipment Zone City","state":"FL","province":"Fast OnTime Province","postalCode":"33000","country":"US","createDateTime":null,"updateDateTime":null}],"createDateTime":null,"updateDateTime":null},"shippedDate":{"valueForShippedDate":"2023-09-08T16:57:37.613899500Z"},"deliveryDate":{"valueForDeliveryDate":"2023-09-08T16:57:37.613899500Z"},"orderLineItems":[{"id":4,"orderId":1,"productId":3,"shipmentId":null,"quantity":1,"price":13.99,"totalPrice":null,"createDateTime":null,"updateDateTime":null},{"id":3,"orderId":1,"productId":1,"shipmentId":null,"quantity":2,"price":10,"totalPrice":null,"createDateTime":null,"updateDateTime":null}],"createDateTime":null,"updateDateTime":null}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []

@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shipments-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shipments-service
+  template:
+    metadata:
+      labels:
+        app: shipments-service
+    spec:
+      containers:
+        - name: shipments-service-app
+          image: shipments-service:0.0.1
+          ports:
+            - containerPort: 8003
+          env:
+            - name: DATA_HOSTNAME
+              value: localhost
+            - name: DATA_USERNAME
+              value: davidking
+            - name: DATA_PASSWORD
+              value: davidking!!
+          imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: shipments-service
+  labels:
+    app: shipments-service
+spec:
+  selector:
+    app: shipments-service
+  ports:
+    - port: 8003
+      targetPort: 8003
+  type: LoadBalancer
