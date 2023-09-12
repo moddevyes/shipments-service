@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-shipments
+spec:
+  selector:
+    matchLabels:
+      app: mysql-shipments
+  template:
+    metadata:
+      labels:
+        app: mysql-shipments
+    spec:
+      containers:
+        - name: mysql-shipments
+          image: mysql:8.1.0
+          ports:
+            - containerPort: 3333
+          volumeMounts:
+            - mountPath: storage
+              name: /data/db
+      volumes:
+        - name: storage
+          persistentVolumeClaim:
+            claimName: mysql-shipments-pvc
